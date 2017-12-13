@@ -44,25 +44,29 @@ public class Interaccion : MonoBehaviour {
 
         if (contacto) // si esta en contacto con un objeto interactuable
         {
-            AccionObjetoActivado(); // acciones de algun objeto
+            if (Input.GetButtonDown("Fire1"))// si el usuario presiona click izquierdo 
+            {
+                AccionObjetoActivado(); // acciones en algun objeto
+            }
         }
         Debug.DrawRay(transform.position, transform.forward * 2.5f, Color.green); // dibujo de raycast como prueba
 
     }
+
+
+    // SUBRUTINAS
     void ResetUI() // resetea cambios en el UI del jugador
     {
         objeto.SetText();// limpia el nombre del objeto
         contacto = false;// no se esta seleccionando un objeto interactuable 
         Mira.GetComponent<Image>().color = Color.white; // Reseteo del color de la mira
     }
-    void AccionObjetoActivado()// acciones de algun objeto
+
+    void AccionObjetoActivado()// acciones en algun objeto
     {
-        if (Input.GetButtonDown("Fire1"))// si el usuario presiona click izquierdo 
+        if (Objetcname == "Generador") // si el nombre del objeto es generador
         {
-            if (Objetcname == "Generador") // si el nombre del objeto es generador
-            {
-                Action.EncenderLuces();//Enciende las luces
-            }
+           Action.EncenderLuces();//Enciende las luces
         }
     }
 

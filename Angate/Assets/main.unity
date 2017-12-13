@@ -815,6 +815,7 @@ GameObject:
   - component: {fileID: 239746570}
   - component: {fileID: 239746572}
   - component: {fileID: 239746571}
+  - component: {fileID: 239746573}
   m_Layer: 5
   m_Name: Objetivos
   m_TagString: Untagged
@@ -879,6 +880,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239746569}
+--- !u!114 &239746573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239746569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321bf2fed4b982b42bb0c09ce3c131d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 239746571}
+  objetivos: {fileID: 4900000, guid: 8c874b6033580a643a82a05f4cdaaa6b, type: 3}
 --- !u!1 &281670722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3164,7 @@ MonoBehaviour:
   WhiteLight: {fileID: 175196743}
   EmergencyLight: {fileID: 500534635}
   DarkScreen: {fileID: 80297557}
+  Objetivos: {fileID: 239746569}
 --- !u!4 &1263905740
 Transform:
   m_ObjectHideFlags: 0
